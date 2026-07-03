@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shopping_list/core/utils/number_extentions.dart';
 import 'package:shopping_list/features/shopping/provider/shopping_provider.dart';
-import 'package:shopping_list/shared/widgets/item_documnets_texts.dart';
+import 'package:shopping_list/shared/widgets/list_view/item_documnets_texts.dart';
 
 class AppListviewCard extends StatelessWidget {
   const AppListviewCard({super.key, required this.index});

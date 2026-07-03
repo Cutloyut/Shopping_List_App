@@ -3,7 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 import 'package:shopping_list/core/utils/check_show_dialog.dart';
 import 'package:shopping_list/features/shopping/provider/shopping_provider.dart';
-import 'package:shopping_list/shared/widgets/app_listview_card.dart';
+import 'package:shopping_list/shared/widgets/list_view/app_listview_card.dart';
 import 'package:shopping_list/shared/widgets/app_total_estimated_price_widget.dart';
 
 class AppListview extends StatefulWidget {
@@ -21,6 +21,7 @@ class _AppListviewState extends State<AppListview> {
           provider.search.isEmpty
               ? Center(child: Text("Bir Kayıt Bulunamadı"))
               : Expanded(
+                  flex: 4,
                   child: ListView.builder(
                     itemCount: provider.search.length,
                     itemBuilder: (BuildContext context, int index) {
@@ -31,7 +32,6 @@ class _AppListviewState extends State<AppListview> {
                           padding: const EdgeInsets.only(left: 20),
                           child: const Icon(Icons.edit, color: Colors.white),
                         ),
-
                         secondaryBackground: Container(
                           color: Colors.red,
                           alignment: Alignment.centerRight,
@@ -60,6 +60,7 @@ class _AppListviewState extends State<AppListview> {
                     },
                   ),
                 ),
+          Spacer(),
           TotalEstimatedPriceWidget(),
         ],
       ),

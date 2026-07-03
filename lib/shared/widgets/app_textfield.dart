@@ -18,6 +18,7 @@ class _AppTextfieldState extends State<AppTextfield> {
   final TextEditingController categoryController = TextEditingController();
   final TextEditingController? priceController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
+
   @override
   void initState() {
     super.initState();
@@ -59,6 +60,7 @@ class _AppTextfieldState extends State<AppTextfield> {
         : unitController.text.trim();
     final count = double.tryParse(countController.text) ?? 0.0;
     final price = double.tryParse(priceController?.text ?? "") ?? 0.0;
+
     if (widget.item == null) {
       context.read<ShoppingProvider>().addItem(
         ShoppingItemModel(
@@ -72,6 +74,7 @@ class _AppTextfieldState extends State<AppTextfield> {
           dateadd: DateTime.now(),
         ),
       );
+
       scaffoldMesage(context, "Ürün Eklendi");
     } else {
       context.read<ShoppingProvider>().editItem(
@@ -86,6 +89,7 @@ class _AppTextfieldState extends State<AppTextfield> {
           dateadd: DateTime.now(),
         ),
       );
+
       scaffoldMesage(context, "Ürün Güncellendi");
     }
   }

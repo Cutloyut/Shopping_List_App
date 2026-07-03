@@ -19,7 +19,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
 
   Future<void> initialize() async {
     await context.read<ShoppingProvider>().savedlistRead();
-    await Future.delayed(const Duration(seconds: 1));
+    await Future.delayed(const Duration(seconds: 3));
     if (!mounted) return;
 
     context.go('/list');
@@ -29,9 +29,26 @@ class _LoadingScreenState extends State<LoadingScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Image(
-          image: AssetImage("assets/shopping_loading_images.png"),
-          fit: BoxFit.cover,
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            spacing: 7,
+            children: [
+              SizedBox(height: 25),
+              Image(
+                image: AssetImage("assets/shopping_loading_images.png"),
+                fit: BoxFit.cover,
+              ),
+              Text(
+                "Düzenleme/Silme İşlemleri\nİçin Sağ Veya Sola Kaydırın",
+                textAlign: TextAlign.center,
+              ),
+              Text(
+                "Ürünün Durumunu Değiştirmek\nİçin Durumun Üstüne Tıklayın",
+                textAlign: TextAlign.center,
+              ),
+            ],
+          ),
         ),
       ),
     );
