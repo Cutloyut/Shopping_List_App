@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:light_dark_theme_toggle/light_dark_theme_toggle.dart';
 import 'package:provider/provider.dart';
 import 'package:shopping_list/core/theme/app_theme.dart';
+import 'package:shopping_list/shared/widgets/app_total_estimated_price_widget.dart';
 import 'package:shopping_list/shared/widgets/list_view/app_listview.dart';
 import 'package:shopping_list/shared/widgets/app_textfield.dart';
 import '../provider/shopping_provider.dart';
@@ -86,6 +87,7 @@ class _ShoppingListScreenState extends State<ShoppingListScreen> {
             ],
           ),
           Expanded(child: AppListview()),
+          TotalEstimatedPriceWidget(),
         ],
       ),
     );

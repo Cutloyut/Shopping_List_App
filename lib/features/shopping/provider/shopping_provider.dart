@@ -28,6 +28,8 @@ class ShoppingProvider with ChangeNotifier {
 
   Future<void> savedlistRead() async {
     _items = await StorageServices().loadItem();
+    categoris = _items.map((e) => e.category).toList();
+    categoris = categoris.toSet().toList();
     notifyListeners();
   }
 
