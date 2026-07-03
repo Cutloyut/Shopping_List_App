@@ -1,0 +1,29 @@
+├─ app_router.dart
+├─ core
+│  ├─ services
+│  │  └─ storage_services.dart
+│  ├─ theme
+│  │  └─ app_theme.dart
+│  └─ utils
+│     ├─ check_show_dialog.dart
+│     ├─ number_extentions.dart
+│     └─ scaffold_msg.dart
+├─ features
+│  └─ shopping
+│     ├─ models
+│     │  └─ shopping_item_model.dart
+│     ├─ provider
+│     │  └─ shopping_provider.dart
+│     └─ screens
+│        ├─ shopping_form_screen.dart
+│        ├─ shopping_list_screen.dart
+│        └─ shopping_loading_screen.dart
+├─ main.dart
+└─ shared
+   └─ widgets
+      ├─ app_textfield.dart
+      ├─ app_total_estimated_price_widget.dart
+      └─ list_view
+         ├─ app_listview.dart
+         ├─ app_listview_card.dart
+         └─ item_documnets_texts.dart
