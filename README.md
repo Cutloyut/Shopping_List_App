@@ -60,7 +60,7 @@ flutter run
 ### 🌙 Dark Mode
 ![Dark](screenshots/dark_mode.jpeg)
 
-### 🔍 Kategori Filtreleme
+### 🔍 Kategori Filitreleme
 ![Filter](screenshots/category_filter.jpeg)
 
 ### ⚠️ Alert Dialog
@@ -68,6 +68,3 @@ flutter run
 
 ---
 
-## 👤 Not
-
-Bu proje Flutter öğrenme süreci için geliştirilmiştir.
