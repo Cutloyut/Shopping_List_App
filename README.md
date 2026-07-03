@@ -30,7 +30,7 @@ Alışveriş listenizi tutabileceğiniz bir uygulamadır.
 ## 🚀 Kurulum
 
 ```bash
-git clone https://github.com/kullaniciadi/shopping_list.git
+git clone https://github.com/Cutloyut/Shopping_List_App
 cd shopping_list
 flutter pub get
 flutter run
